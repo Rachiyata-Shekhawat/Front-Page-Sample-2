@@ -1,0 +1,180 @@
+/* ======================= Common styling ========================== */
+
+html { font-size: 15px; }
+
+* { 
+	box-sizing: border-box; 
+	font-family: 'Source Sans Pro',sans-serif;
+}
+
+a{ 
+	text-decoration: none; 
+	cursor: pointer;
+}
+
+ul,
+h1,
+h2,
+p {
+	padding: 0rem;
+	margin: 0rem;
+}
+
+ul li { display: inline-block; }
+
+button { cursor: pointer; }
+
+.banner { background-color: #80808066; }
+
+.flex { display: flex; }
+
+.orangeButton {
+	border-radius: 1rem;
+	border: none;
+	padding: 0.5rem;
+	background-color: #ff8100;
+	width: 7rem;
+}
+
+.orangeButton:hover { background-color: black; }
+
+.buttonText { color: white; }
+
+.bold { font-weight: 800;}
+
+.orange { color:#ff8100;}
+
+
+/* ======================= header styling ========================== */
+
+header {
+	padding: 2rem;
+	flex-direction: column;
+	background-color: white;
+	opacity: 0.7;
+}
+
+.headerNav {
+	margin: 1.5rem 0rem;
+	border: 1px solid #80808066;
+	border-right: 0px;
+	border-left: 0;
+	padding: 1.5rem 0rem 0rem 0rem;
+}
+
+.headerNav ul {
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.headerNav ul li {
+	padding: 0rem 1rem 1rem 1rem;
+	width: 81px;
+}
+
+.headerNavItemName {
+	font-weight: bold;
+	font-size: 1rem;
+	color: black;
+}
+
+.headerNavItemName:hover { color: #ff8100;}
+
+.download { align-self: flex-end }
+
+
+/* ========================= main styling ========================== */
+
+main { 
+	padding: 2rem;
+	flex-direction: column;
+}
+
+.mainContent h2 {
+	margin: 1.3rem 0rem;
+	font-size: 2rem;
+	font-weight: 700;
+}
+
+.mainContent p {
+	font-size: 0.9rem;
+	line-height: 1.4rem;
+}
+
+form {
+	margin: 3rem 0rem;
+	border-radius: 1rem;
+	padding-left: 1rem;
+  flex-direction: column;
+	justify-content: space-between;
+}
+
+form input { 
+	margin-bottom: 1rem;
+	border: 0px solid;
+	border-radius: 1rem;
+	padding: 0.5rem;
+}	
+
+form input:focus { outline: none;}
+
+form button {align-self: center;}
+
+.mainImg img { width: 100%;}
+
+
+/* ======================= media queries ========================== */
+
+@media only screen and (min-width: 368px) {
+	form {
+		margin: 3rem 0rem;
+		border-radius: 1rem;
+		padding-left: 1rem;
+		flex-direction: row;
+		justify-content: space-between;
+		background-color: white;
+	}
+
+	form input {
+		margin: 0rem;
+		padding: 0rem;
+	}
+}
+
+@media only screen and (min-width:635px) {
+	main { padding: 6rem; }
+}
+
+@media only screen and (min-width:834px) {
+	header {
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.headerNav,
+	.headerNav ul,
+	.headerNav ul li {
+		margin: 0;
+		padding: 0;
+	}
+
+	.headerNav { border:0px;}
+
+	main { 
+    padding: 6rem 0rem 6rem 8rem;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.mainContent { align-self: flex-end; }
+
+	form { 
+		margin-top: 7rem;
+		margin-bottom: 0rem;
+	}
+
+	.mainImg { height: 23rem; }
+
+	.mainImg img { height: 100%; }
+}
